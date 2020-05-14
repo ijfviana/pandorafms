@@ -64,10 +64,8 @@ module_name I/O Blocks received
 module_type generic_data
 module_interval 1
 module_exec echo $VMSTAT | awk '{ print $9 }'
-module_max 100
-module_min 0
 module_description Blocks received from a block device (blocks/s)
-module_unit %
+module_unit blocks/s
 module_group System
 module_end
 
@@ -76,9 +74,7 @@ module_name I/O Blocks sent
 module_type generic_data
 module_interval 1
 module_exec echo $VMSTAT | awk '{ print $10 }'
-module_max 100
-module_min 0
 module_description Blocks sent to a block device (blocks/s).
-module_unit %
+module_unit blocks/s
 module_group System
 module_end
